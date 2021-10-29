@@ -1,0 +1,48 @@
+.google-main-box{
+   width: 30%;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+   box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+   padding: 50px;
+   border-radius: 10px;
+}
+
+.google-main-box h1{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.google-btn{
+    border: 2px solid #000;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background: #eb4d4b;
+}
+.google-btn input{
+    background: transparent;
+    border: 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.google-btn i {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+@media (max-width:600px){
+    .google-main-box{
+        width: 95%;
+        z-index: -1;
+    }
+    .google-btn input, .google-btn i {
+        font-size: 20px;
+    }
+    
+}
+

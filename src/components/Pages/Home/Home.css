@@ -1,0 +1,76 @@
+/* Banner Section Css Start Here  */
+
+.banner-section{
+    background: url(../../img/banner-main.jpg);
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 74px;
+}
+
+.banner-content{
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.banner-section::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background:rgba(0,0,0,0.5);
+    z-index: -1;
+}
+
+.banner-title{
+    font-size: 4rem;
+    color: #f1c40f;
+}
+
+.banner-des{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #e056fd;
+}
+
+/* Banner Section Css End Here  */
+
+/* About Section Start Here  */
+
+.main-title{
+    color: #130f40;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.about-des{
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #30336b;
+}
+
+/* About Section End Here  */
+
+@media(max-width:600px){
+    .banner-section{
+        margin-top: 60px;
+    }
+    .banner-content{
+       width: 100%;
+       padding: 20px;
+    }
+    .banner-title{
+        font-size: 2rem;
+    }
+    
+    .banner-des{
+        font-size: 1rem;
+    }
+}

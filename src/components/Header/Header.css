@@ -1,0 +1,24 @@
+.navbar-light .navbar-toggler {
+    color: white !important;
+    border-color: white !important;
+}
+
+.navbar-toggler {
+    background-color: #e4e4ee !important;
+}
+
+.agency{
+    color: #dc143c;
+}
+
+.header-button{
+    background: crimson !important;
+}
+
+.nav-item{
+    font-weight: 500;
+}
+
+.nav-item:hover{
+    color: #dc143c !important;
+}
