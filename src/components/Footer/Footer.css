@@ -1,0 +1,15 @@
+.footer-main-box{
+    background: #212529;
+    color: #fff;
+    padding: 50px 0 20px;
+}
+
+.footer-main{
+    border-bottom: 2px solid #fff;
+    padding-bottom: 30px;
+}
+
+.footer-main p{
+    font-size: 1.01rem;
+    font-weight: 500;
+}

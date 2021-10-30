@@ -8,7 +8,6 @@
     background-position: center;
     position: relative;
     z-index: 1;
-    margin-top: 74px;
 }
 
 .banner-content{
@@ -58,10 +57,33 @@
 
 /* About Section End Here  */
 
+/* Service Secition Css Start */
+
+.cmn-btn{
+    text-decoration: none;
+    background: #dc143c;
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 2px solid #130f40;
+    transition: .5s;
+    margin: 8px 0;
+    display: inline-block;
+}
+.cmn-btn i{
+    margin-left: 10px;
+}
+
+.cmn-btn:hover{
+    background: #2e8b57;
+    color: #fff;
+}
+
+/* Service Secition Css End */
+
 @media(max-width:600px){
-    .banner-section{
-        margin-top: 60px;
-    }
     .banner-content{
        width: 100%;
        padding: 20px;

@@ -1,0 +1,13 @@
+.single-guide{
+    background: #27ae60;
+}
+
+.single-guide h3,.single-guide p{
+    color: #fff;
+}
+
+@media (max-width:600px){
+    .main-title {
+        font-size: 1.8rem;
+    }
+}

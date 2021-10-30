@@ -1,0 +1,27 @@
+.not-found-page{
+    padding: 40px 10px;
+}
+.not-found-page h1{
+    font-size: 8rem;
+    font-weight: 700;
+    padding:40px 0 10px;
+}
+
+.not-found-page h1 span{
+    color: orangered;
+}
+.not-found-page p{
+    font-size: 5rem;
+    font-weight: 600;
+    padding-bottom:20px ;
+}
+
+.not-found-page .not-btn{
+    margin-bottom: 20px;
+}
+
+@media(max-width:600px){
+    .not-found-page p{
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,27 @@
+.manage-order{
+    border: 2px solid #555;
+    border-radius: 10px;
+    background: #f6b93b;
+}
+
+.manage-order p{
+    font-size: 17px;
+    font-weight: 600;
+    color: #B33771;
+}
+
+.simi-btn{
+    border: 2px solid #182C61;
+    padding: 6px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    background: #ED4C67;
+    color: #fff;
+    transition: .3s;
+}
+
+.simi-btn:hover{
+    background: #A3CB38;
+    border-color:#ED4C67 ;
+}

@@ -1,0 +1,41 @@
+.form-sub{
+    width: 40%;
+    margin: 0 auto;
+    padding: 20px 0 30px;
+}
+
+.form-sub input,.form-sub textarea{
+    width: 100%;
+    padding: 8px 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #000;
+}
+
+.form-sub input[type="submit"]{
+    background: #2ecc71;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.form-sub textarea{
+    resize: none;
+}
+
+.form-sub input:focus,.form-sub textarea:focus{
+    border-color:#2ecc71 ;
+}
+
+.google-map iframe{
+    border: 1.5px solid #000;
+    padding: 5px;
+    margin: 20px 0;
+}
+
+@media(max-width:600px){
+    .form-sub{
+        width: 95%;
+    }
+}

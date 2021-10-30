@@ -1,9 +1,12 @@
+.google-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 130px 0;
+}
 .google-main-box{
    width: 30%;
-   position: absolute;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%,-50%);
+   margin: auto;
    text-align: center;
    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
    padding: 50px;
@@ -38,7 +41,6 @@
 @media (max-width:600px){
     .google-main-box{
         width: 95%;
-        z-index: -1;
     }
     .google-btn input, .google-btn i {
         font-size: 20px;

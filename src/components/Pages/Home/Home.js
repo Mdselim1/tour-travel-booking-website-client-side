@@ -2,9 +2,17 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import './Home.css';
 import aboutus from '../../img/about-us.jpg';
+import HomeService from './HomeService/HomeService';
+import { Link } from 'react-router-dom';
+import TourGuide from './TourGuide/TourGuide';
+import useAuth from '../../../context/useAuth';
 
 
 const Home = () => {
+
+
+    const {travelService,tourguide } = useAuth();
+
     return (
         <div>
             
@@ -49,29 +57,41 @@ const Home = () => {
             {/* Vacations Services Section Start Here  */}
 
             <div className="featured-services pb-5">
-            <h1 className="main-title text-center">Our Services Plan</h1>
+            <h1 className="main-title text-center pb-5">Our Services</h1>
                 <Container>
 
                     <Row>
-
-                        <Col lg={4} sm={12}>
-
-                        </Col>
-                        <Col lg={4} sm={12}>
-
-                        </Col>
-                        <Col lg={4} sm={12}>
-
-                        </Col>
-
+                        {
+                            travelService.slice(0,6).map(serv=><HomeService key={serv._id} data={serv}></HomeService>)
+                        }
                     </Row>
-
+                    <div className="text-center">
+                        <Link className="cmn-btn" to="/services">See More Service <i className="fas fa-arrow-right"></i></Link>
+                        </div>
                 </Container>
 
             </div>
 
 
             {/* Vacations Services Section End Here  */}
+
+            {/* Tour Guiders Section Starts Here  */}
+
+            <div className="featured-services pb-5">
+            <h1 className="main-title text-center pb-5">Our Tour Guide</h1>
+                <Container>
+
+                    <Row>
+                        {
+                            tourguide.map(serv=><TourGuide key={serv._id} data={serv}></TourGuide>)
+                        }
+                    </Row>
+                   
+                </Container>
+
+            </div>
+
+            {/* Tour Guiders Section Ends Here  */}
 
 
         </div>
