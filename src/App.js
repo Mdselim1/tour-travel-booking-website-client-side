@@ -26,9 +26,9 @@ function App() {
         <Route exact path="/home">
               <Home></Home>
         </Route>
-        <PrivateRoute exact path="/services">
+        <Route exact path="/services">
               <Services></Services>
-        </PrivateRoute>
+        </Route>
         <Route exact path="/contact">
               <Contact></Contact>
         </Route>
@@ -38,12 +38,12 @@ function App() {
         <PrivateRoute exact path="/purchase/:id">
               <Purchase></Purchase>
         </PrivateRoute>
-        <Route exact path="/manageorder">
+        <PrivateRoute exact path="/manageorder">
               <ManageOrder></ManageOrder>
-        </Route>
-        <Route exact path="/order/update/:id">
+        </PrivateRoute>
+        <PrivateRoute exact path="/order/update/:id">
               <UpdateOrder></UpdateOrder>
-        </Route>
+        </PrivateRoute>
         <Route exact path="/login">
               <LogIn></LogIn>
         </Route>

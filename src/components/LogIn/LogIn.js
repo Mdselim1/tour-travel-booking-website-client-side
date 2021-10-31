@@ -4,19 +4,18 @@ import useAuth from '../../context/useAuth';
 import './LogIn.css';
 
 const LogIn = () => {
-    const { handleGoogleSignIn } = useAuth();
+    const { handleGoogleSignIn ,setLoading} = useAuth();
   
     const history = useHistory();
     const location = useLocation();
     const redirect_uri = location?.state?.from || '/';
-
     const GoogleSignIn = () => {
         handleGoogleSignIn()
-        .then(result => {
-            
-            history.push(redirect_uri);
+            .then(result => {
+                history.push(redirect_uri);
         })
-    }
+            .finally(() => setLoading(false))     
+    };
 
 
     return (

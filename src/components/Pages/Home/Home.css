@@ -81,6 +81,42 @@
     color: #fff;
 }
 
+.contact-home{
+    background: #95a5a6;
+    border-radius: 20px;
+}
+
+.cont-btn{
+    background: #e67e22;
+    text-decoration: none;
+    padding: 10px 40px;
+    font-size: 20px;
+    font-weight: 600;
+    color:#fff;
+    border: 2px solid #27ae60;
+    border-radius: 8px;
+    display: inline-block;
+    transition: .3s;
+}
+
+.cont-btn:hover{
+    background:#e74c3c ;
+    color: #fff;
+}
+
+.cont-text h1{
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #FFC312;
+}
+.cont-text p{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #fbc531;
+}
+
 /* Service Secition Css End */
 
 @media(max-width:600px){
@@ -94,5 +130,14 @@
     
     .banner-des{
         font-size: 1rem;
+    }
+    .cont-text h1{
+        font-size: 28px;
+    }
+    .cont-text p{
+        font-size: 18px;
+    }
+    .cont-btn{
+        margin-top: 20px;
     }
 }

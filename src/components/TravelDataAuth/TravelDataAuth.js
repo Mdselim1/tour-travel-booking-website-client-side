@@ -9,31 +9,26 @@ const TravelDataAuth = () => {
     const [travelService, setTravelService] = useState([]);
     const [tourguide, setTourGuide] = useState([]);
     const [user, setUser] = useState({});
-    const [error, setError] = useState('');
     const [loading, setLoading] = useState(true);
 
     // For Travel Data 
     useEffect(() => {
-        setLoading(true)
         fetch('https://bloodcurdling-scarecrow-65788.herokuapp.com/travelservices')
             .then(res => res.json())
             .then(data => setTravelService(data))
             .catch(error => {
                 console.log(error.message);
             })
-        .finally(()=> setLoading(false))
     }, []);
 
     // For Guides Data 
     useEffect(() => {
-        // setLoading(true)
         fetch('https://bloodcurdling-scarecrow-65788.herokuapp.com/guides')
             .then(res => res.json())
             .then(data => setTourGuide(data))
             .catch(error => {
                 console.log(error.message);
             })
-        .finally(()=>setLoading(false))
     }, []);
 
     // Firebase Log In System start here 
@@ -46,10 +41,7 @@ const TravelDataAuth = () => {
     const handleGoogleSignIn = () => {
        setLoading(true)
        return signInWithPopup(auth, provider)
-            .catch(error => {
-                setError(error.message)
-            })
-        .finally(()=>setLoading(false))
+            .finally(()=>setLoading(false))
     };
 
     // Sign Out Method 
@@ -57,34 +49,32 @@ const TravelDataAuth = () => {
         setLoading(true)
         signOut(auth).then(() => {
             
-        }).catch(error => {
-            console.log(error.message);
         })
         .finally(()=>setLoading(false))
-
-    }
+ }
 
 // On AuthState Change here 
     useEffect(() => {
+        setLoading(true)
        const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
             } else {
                 setUser({})
-            }
+           }
+           setLoading(false)
        })
-        setLoading(false)
         return () => unsubscribed;
-    },[])
+    }, [])
     
+       
 
     return {
         travelService,
         tourguide,
         handleGoogleSignIn,
         user,
-        error,
-        handleSignOut,loading
+        handleSignOut,loading,setLoading
     }
 
 };

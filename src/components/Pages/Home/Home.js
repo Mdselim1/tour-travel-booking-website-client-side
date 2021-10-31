@@ -93,6 +93,25 @@ const Home = () => {
 
             {/* Tour Guiders Section Ends Here  */}
 
+            <div className="mb-5">
+                <Container>
+                    <div className="contact-home p-5">
+                    <Row className="align-items-center">
+                        <Col lg={6} sm={12}>
+                                <div className="cont-text">
+                                <h1>Go a happy Journey With Us</h1>
+                            <p>Please Contact Us</p>
+                            </div>
+                        </Col>
+                        <Col lg={6} sm={12}>
+                            <div className="text-center">
+                            <Link className="cont-btn" to="/contact">Contact Us <i className="fas fa-arrow-right ms-3"></i></Link>
+                            </div>
+                        </Col>
+                    </Row>
+                    </div>
+                </Container>
+            </div>
 
         </div>
     );

@@ -6,16 +6,17 @@ import useAuth from '../../context/useAuth';
 const PrivateRoute = ({children , ...rest}) => {
 
     const { user, loading } = useAuth();
-    console.log(loading);
+    
     if (loading) {
-        return <Spinner animation="border" variant="danger" />
+        return <div className="text-center" style={{padding:'200px 0'}}>
+            <Spinner animation="grow" variant="warning" />
+        </div>;
     }
-
     return (
         <Route
             {...rest}
             render={({ location }) => 
-                user.email ? (children)
+                user?.email ? children
                     : (<Redirect
                             to={{
                                 pathname: "/login",

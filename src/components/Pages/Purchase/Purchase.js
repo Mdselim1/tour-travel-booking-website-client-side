@@ -46,7 +46,8 @@ const Purchase = () => {
             <h1 className="main-title text-center pb-5 pt-3">Purchase Now</h1>
                 <Row>
                 <Col lg={6}>
-                <Row>
+                        <div className="border border-primary border-2 rounded-3 p-2">
+                        <Row className="align-items-center">
                             <Col sm={6}>
                             <img className="img-fluid border border-dark p-1" src={service?.data?.img} alt="" />
                             </Col>
@@ -55,13 +56,14 @@ const Purchase = () => {
                             <h3>{service?.data?.pricing} $</h3>
                             </Col>
                 </Row>
+                </div>
                 </Col>
                 <Col lg={6}>
                 <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
-      <input placeholder="Enter your email" {...register("email")} />
-      <input placeholder="Enter your journey date" {...register("journeydate")} />
-      <input placeholder="Enter your return date" {...register("returndate")} />
-      <input placeholder="Number of people go" type="number" {...register("people")} />
+      <input placeholder="Enter your email" {...register("email")} required />
+      <input placeholder="Enter your journey date" {...register("journeydate")} required />
+      <input placeholder="Enter your return date" {...register("returndate")} required />
+      <input placeholder="Number of people go" type="number" {...register("people")} required />
      <input type="submit" value="Booking"/>
     
     </form>
