@@ -18,7 +18,7 @@ const Purchase = () => {
 
     // Get data from server 
     useEffect(() => {
-        axios.get(`http://localhost:8000/travelservices/${id}`)
+        axios.get(`https://bloodcurdling-scarecrow-65788.herokuapp.com/travelservices/${id}`)
             .then(result => {
                 setService(result);
             })
@@ -30,7 +30,7 @@ const Purchase = () => {
     
     const onSubmit = data => {
         data.service = service.data;
-        axios.post('http://localhost:8000/order', data)
+        axios.post('https://bloodcurdling-scarecrow-65788.herokuapp.com/order', data)
             .then(result => {
                 if (result.data.insertedId) {
                     alert('You Booking Successfully . Thanks for join with us');

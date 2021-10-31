@@ -7,7 +7,7 @@ const AddService = () => {
 
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:8000/travelservices', data)
+        axios.post('https://bloodcurdling-scarecrow-65788.herokuapp.com/travelservices', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Data upload successfully');

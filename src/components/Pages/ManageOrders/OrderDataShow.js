@@ -14,7 +14,7 @@ const OrderDataShow = (props) => {
     const handleDeleteUser = id => {
         const deleteSure = window.confirm('Are your Sure You Want To Delete');
         if (deleteSure) {
-            axios.delete(`http://localhost:8000/order/${id}`)
+            axios.delete(`https://bloodcurdling-scarecrow-65788.herokuapp.com/order/${id}`)
             .then(result => {
                 if (result.data.deletedCount > 0) {
                     alert('Deleted Order Successfully');

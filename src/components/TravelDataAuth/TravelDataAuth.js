@@ -10,25 +10,30 @@ const TravelDataAuth = () => {
     const [tourguide, setTourGuide] = useState([]);
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(true);
 
     // For Travel Data 
     useEffect(() => {
-        fetch('http://localhost:8000/travelservices')
+        setLoading(true)
+        fetch('https://bloodcurdling-scarecrow-65788.herokuapp.com/travelservices')
             .then(res => res.json())
             .then(data => setTravelService(data))
             .catch(error => {
-                console.log(error.messege);
+                console.log(error.message);
             })
+        .finally(()=> setLoading(false))
     }, []);
 
     // For Guides Data 
     useEffect(() => {
-        fetch('http://localhost:8000/guides')
+        // setLoading(true)
+        fetch('https://bloodcurdling-scarecrow-65788.herokuapp.com/guides')
             .then(res => res.json())
             .then(data => setTourGuide(data))
             .catch(error => {
                 console.log(error.message);
             })
+        .finally(()=>setLoading(false))
     }, []);
 
     // Firebase Log In System start here 
@@ -39,23 +44,23 @@ const TravelDataAuth = () => {
 
     // Google Sign In Method 
     const handleGoogleSignIn = () => {
-       
-        signInWithPopup(auth, provider)
-            .then(result => {
-                setUser(result.user);
-            }).catch(error => {
+       setLoading(true)
+       return signInWithPopup(auth, provider)
+            .catch(error => {
                 setError(error.message)
             })
+        .finally(()=>setLoading(false))
     };
 
     // Sign Out Method 
     const handleSignOut = () => {
-        
+        setLoading(true)
         signOut(auth).then(() => {
             
         }).catch(error => {
             console.log(error.message);
         })
+        .finally(()=>setLoading(false))
 
     }
 
@@ -68,6 +73,7 @@ const TravelDataAuth = () => {
                 setUser({})
             }
        })
+        setLoading(false)
         return () => unsubscribed;
     },[])
     
@@ -78,7 +84,7 @@ const TravelDataAuth = () => {
         handleGoogleSignIn,
         user,
         error,
-        handleSignOut
+        handleSignOut,loading
     }
 
 };

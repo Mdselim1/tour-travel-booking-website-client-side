@@ -10,7 +10,7 @@ const UpdateOrder = () => {
 
     // get data from database with spacified id 
     useEffect(() => {
-        axios.get(`http://localhost:8000/order/${id}`)
+        axios.get(`https://bloodcurdling-scarecrow-65788.herokuapp.com/order/${id}`)
             .then(result => {
                 setService(result.data);
             });
@@ -54,7 +54,7 @@ const UpdateOrder = () => {
         e.preventDefault();
         const wantupdate = window.confirm('Update Your Data Surely');
         if (wantupdate) {
-            axios.put(`http://localhost:8000/order/${id}`, service)
+            axios.put(`https://bloodcurdling-scarecrow-65788.herokuapp.com/order/${id}`, service)
                 .then(result => {
                     if (result.data.modifiedCount > 0) {
                         alert('Data Updated Successfully');

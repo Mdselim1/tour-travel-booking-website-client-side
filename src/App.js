@@ -11,6 +11,7 @@ import UpdateOrder from './components/Pages/ManageOrders/UpdateOrder';
 import Notfound from './components/Pages/Notfound/Notfound';
 import Purchase from './components/Pages/Purchase/Purchase';
 import Services from './components/Pages/Services/Services';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import  AuthProvider from './context/AuthProvider';
 function App() {
 
@@ -25,18 +26,18 @@ function App() {
         <Route exact path="/home">
               <Home></Home>
         </Route>
-        <Route exact path="/services">
+        <PrivateRoute exact path="/services">
               <Services></Services>
-        </Route>
+        </PrivateRoute>
         <Route exact path="/contact">
               <Contact></Contact>
         </Route>
-        <Route exact path="/addservice">
+        <PrivateRoute exact path="/addservice">
               <AddService></AddService>
-        </Route>
-        <Route exact path="/purchase/:id">
+        </PrivateRoute>
+        <PrivateRoute exact path="/purchase/:id">
               <Purchase></Purchase>
-        </Route>
+        </PrivateRoute>
         <Route exact path="/manageorder">
               <ManageOrder></ManageOrder>
         </Route>

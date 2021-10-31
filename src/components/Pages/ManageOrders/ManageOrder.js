@@ -8,7 +8,7 @@ const ManageOrder = () => {
     const [order, setOrder] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/order')
+        axios.get('https://bloodcurdling-scarecrow-65788.herokuapp.com/order')
             .then(result => {
                 setOrder(result.data)
             })
